@@ -1,0 +1,55 @@
+# ArchCharm
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor backups
+*~
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# Logs
+*.log
+/tmp/archcharm-install-*
+
+# Package manager
+*.pkg.tar.zst
+pkg/
+src/
+
+# IDE
+.idea/
+.vscode/
+*.code-workspace
+
+# Python
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+
+# Misc
+nohup.out
+
+# Noctalia plugin cache
+dotfiles/noctalia/plugins/*/cache/
+
+# Fonts (binary files)
+*.ttf
+*.otf
+*.woff
+*.woff2
+
+# Images in plugins
+dotfiles/noctalia/plugins/*/preview.png
+
+# Wlogout waybar collection (reference configs, not used)
+dotfiles/wlogout/waybar/
