@@ -1,0 +1,33 @@
+# Noctalia Theme for Kitty
+
+# Primary colors
+foreground #f3edf7
+background #070722
+
+# Cursor
+cursor #fff59b
+cursor_text_color #070722
+
+# Selection
+selection_background #f3edf7
+selection_foreground #070722
+
+# Normal colors
+color0 #11112d  # black
+color1 #FD4663  # red
+color2 #9BFECE # green
+color3 #fff59b # yellow
+color4 #a9aefe # blue
+color5 #FD4663 # magenta
+color6 #9BFECE # cyan
+color7 #f3edf7 # white
+
+# Bright colors
+color8  #21215F  # bright black
+color9  #FD4663  # bright red
+color10 #9BFECE # bright green
+color11 #fff59b # bright yellow
+color12 #a9aefe # bright blue
+color13 #FD4663 # bright magenta
+color14 #9BFECE # bright cyan
+color15 #ffffff # bright white
