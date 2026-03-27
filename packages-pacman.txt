@@ -1,0 +1,101 @@
+# ═══════════════════════════════════════════════════════════════════
+# ArchCharm - Official Repository Packages
+# ═══════════════════════════════════════════════════════════════════
+
+# ── Window Manager & Compositor ────────────────────────────────────
+niri
+xdg-desktop-portal-gnome
+xdg-desktop-portal-gtk
+polkit-gnome
+
+# ── Session & Display ─────────────────────────────────────────────
+greetd
+greetd-tuigreet
+swaybg
+swaylock
+
+# ── Shell ──────────────────────────────────────────────────────────
+fish
+starship
+zoxide
+thefuck
+
+# ── Terminals ──────────────────────────────────────────────────────
+alacritty
+kitty
+foot
+
+# ── Editor ─────────────────────────────────────────────────────────
+neovim
+
+# ── Status Bar ─────────────────────────────────────────────────────
+waybar
+
+# ── Launcher ───────────────────────────────────────────────────────
+fuzzel
+walker
+
+# ── Notifications ──────────────────────────────────────────────────
+mako
+libnotify
+
+# ── Clipboard ──────────────────────────────────────────────────────
+cliphist
+wl-clipboard
+
+# ── File Management ────────────────────────────────────────────────
+nautilus
+yazi
+ranger
+
+# ── Audio ──────────────────────────────────────────────────────────
+pipewire
+pipewire-pulse
+pipewire-alsa
+wireplumber
+pavucontrol
+cava
+
+# ── Media ──────────────────────────────────────────────────────────
+mpv
+
+# ── System Monitoring ─────────────────────────────────────────────
+bottom
+fastfetch
+htop
+
+# ── Git & Dev Tools ────────────────────────────────────────────────
+git
+github-cli
+lazygit
+tmux
+
+# ── Network ────────────────────────────────────────────────────────
+networkmanager
+network-manager-applet
+bluez
+bluez-utils
+
+# ── Fonts ──────────────────────────────────────────────────────────
+ttf-jetbrains-mono-nerd
+noto-fonts
+noto-fonts-emoji
+
+# ── Utilities ──────────────────────────────────────────────────────
+brightnessctl
+playerctl
+jq
+curl
+wget
+unzip
+p7zip
+tree
+bat
+eza
+fd
+ripgrep
+fzf
+btop
+gnome-keyring
+wlogout
+xdg-utils
