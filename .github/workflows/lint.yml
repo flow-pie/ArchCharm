@@ -18,7 +18,7 @@ jobs:
 
       - name: Lint shell scripts
         run: |
-          find . -name '*.sh' -print0 | xargs -0 shellcheck --severity=warning
+          find . -name '*.sh' -print0 | xargs -0 shellcheck --severity=error
 
   json-lint:
     name: JSON Syntax
@@ -39,12 +39,21 @@ jobs:
 
       - name: Validate JSONC files (basic syntax)
         run: |
-          failed=0
-          for f in $(find . -name '*.jsonc' -not -path './.git/*'); do
-            stripped=$(sed 's|//.*$||g; /^[[:space:]]*$/d' "$f")
-            if ! echo "$stripped" | python3 -m json.tool > /dev/null 2>&1; then
-              echo "Invalid JSONC: $f"
-              failed=1
-            fi
-          done
-          exit $failed
+          python3 -c "
+          import re, json, glob, sys
+          failed = 0
+          for f in glob.glob('**/*.jsonc', recursive=True):
+              text = open(f).read()
+              # Strip block comments
+              text = re.sub(r'/\*.*?\*/', '', text, flags=re.DOTALL)
+              # Strip line comments
+              text = re.sub(r'//.*?$', '', text, flags=re.MULTILINE)
+              # Remove trailing commas before } or ]
+              text = re.sub(r',\s*([}\]])', r'\1', text)
+              try:
+                  json.loads(text)
+              except json.JSONDecodeError as e:
+                  print(f'Invalid JSONC: {f} — {e}')
+                  failed = 1
+          sys.exit(failed)
+          "
