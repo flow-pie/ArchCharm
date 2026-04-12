@@ -87,6 +87,22 @@ done
 
 # Signal apps to reload if running
 if command -v niri >/dev/null; then
+    # Patch ~/.config/niri/basicsettings.kdl if it exists to ensure colors take effect
+    BASIC_SETTINGS="$HOME/.config/niri/basicsettings.kdl"
+    if [[ -f "$BASIC_SETTINGS" ]]; then
+        PRIMARY=$(jq -r ".mPrimary" "$COLORS_JSON")
+        SURFACE=$(jq -r ".mSurface" "$COLORS_JSON")
+        ERROR=$(jq -r ".mError" "$COLORS_JSON")
+        
+        # Use perl for multi-line replacement in basicsettings.kdl
+        perl -i -0777 -pe "
+            s/(focus-ring \{)\s*off/\$1\n        on/g;
+            s/(border \{)\s*off/\$1\n        on/g;
+            s/(shadow \{)\s*off/\$1\n        on/g;
+            s/(focus-ring \{.*?active-color\s*)\"[^\"]*\"/\$1\"$PRIMARY\"/sg;
+            s/(border \{.*?active-color\s*)\"[^\"]*\"/\$1\"$PRIMARY\"/sg;
+        " "$BASIC_SETTINGS"
+    fi
     niri msg action do-screen-transition 2>/dev/null || true
 fi
 
