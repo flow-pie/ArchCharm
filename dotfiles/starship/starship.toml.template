@@ -19,22 +19,22 @@ $character\
 """
 
 [character]
-success_symbol = "[]({{mPrimary}})[󰄸]({{mSurface}})[]({{mPrimary}}) "
-error_symbol = "[]({{mError}})[󰄸]({{mSurface}})[]({{mError}}) "
+success_symbol = "[]({{mPrimary}})[󰄸]({{mOnPrimary}})[]({{mPrimary}}) "
+error_symbol = "[]({{mError}})[󰄸]({{mOnError}})[]({{mError}}) "
 
 [directory]
-format = "[]({{mPrimary}})[ ]({{mSurface}})[$path]({{mSurface}})[]({{mPrimary}})"
+format = "[]({{mPrimary}})[ ]({{mOnPrimary}})[$path]({{mOnPrimary}})[]({{mPrimary}})"
 truncation_length = 3
 truncation_symbol = "…/"
 
 [git_branch]
-format = " []({{mPrimary}})[]({{mSurface}})[$branch]({{mSurface}})[]({{mPrimary}})"
+format = " []({{mPrimary}})[]({{mOnPrimary}})[$branch]({{mOnPrimary}})[]({{mPrimary}})"
 
 [git_status]
-format = "([]({{mSecondary}})[$all_status$ahead_behind]({{mSurface}})[]({{mSecondary}}))"
+format = "([]({{mSecondary}})[$all_status$ahead_behind]({{mOnSecondary}})[]({{mSecondary}}))"
 
 [python]
-format = " []({{mTertiary}})[]({{mSurface}})[$virtualenv]({{mSurface}})[]({{mTertiary}})"
+format = " []({{mTertiary}})[]({{mOnTertiary}})[$virtualenv]({{mOnTertiary}})[]({{mTertiary}})"
 
 [nodejs]
-format = " []({{mTertiary}})[]({{mSurface}})[$version]({{mSurface}})[]({{mTertiary}})"
+format = " []({{mTertiary}})[]({{mOnTertiary}})[$version]({{mOnTertiary}})[]({{mTertiary}})"
