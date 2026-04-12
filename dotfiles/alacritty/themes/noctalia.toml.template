@@ -1,0 +1,68 @@
+[colors.primary]
+background = '{{mSurface}}'
+foreground = '{{mOnSurface}}'
+ 
+[colors.cursor]
+text = '{{mOnSurface}}'
+cursor = '{{mOnSurfaceVariant}}' 
+ 
+[colors.vi_mode_cursor]
+text = '{{mSurface}}'
+cursor = '{{mPrimary}}' 
+ 
+[colors.search.matches]
+foreground = '{{mOnPrimary}}' 
+background = '{{mTertiary}}' 
+ 
+[colors.search.focused_match]
+foreground = '{{mOnPrimary}}' 
+background = '{{mPrimary}}' 
+ 
+[colors.footer_bar]
+foreground = '{{mOnPrimary}}' 
+background = '{{mOnSurfaceVariant}}' 
+ 
+[colors.hints.start]
+foreground = '{{mOnPrimary}}' 
+background = '{{mSecondary}}' 
+ 
+[colors.hints.end]
+foreground = '{{mOnPrimary}}' 
+background = '{{mSecondary}}' 
+ 
+[colors.selection]
+text = '{{mSurface}}'
+background = '{{mPrimary}}'
+ 
+ 
+[colors.normal]
+black = '#181818' 
+red = '{{mError}}' 
+green = '{{mPrimary}}' 
+yellow = '{{mOutline}}' 
+blue = '{{mPrimary}}' 
+magenta = '{{mTertiary}}' 
+cyan = '{{mSecondary}}' 
+white = '#BAC2DE' 
+ 
+ 
+[colors.bright]
+black = '#585B70' 
+red = '#F38BA8' 
+green = '#A6E3A1' 
+yellow = '#F9E2AF' 
+blue = '#89B4FA' 
+magenta = '#F5C2E7' 
+cyan = '#94E2D5' 
+white = '#A6ADC8' 
+ 
+ 
+[colors.dim]
+black = '#45475A' 
+red = '#F38BA8' 
+green = '#A6E3A1' 
+yellow = '#F9E2AF' 
+blue = '#89B4FA' 
+magenta = '#F5C2E7' 
+cyan = '#94E2D5' 
+white = '#BAC2DE' 

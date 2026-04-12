@@ -1,0 +1,42 @@
+layout {
+    focus-ring {
+        on
+        width 2
+        active-color   "{{mPrimary}}"
+        inactive-color "{{mSurface}}"
+        urgent-color   "{{mError}}"
+    }
+
+    border {
+        on
+        width 2
+        active-color   "{{mPrimary}}"
+        inactive-color "{{mSurface}}"
+        urgent-color   "{{mError}}"
+    }
+
+    shadow {
+        on
+        color "{{mShadow}}70"
+        softness 25
+        spread 3
+        offset x=0 y=4
+    }
+
+    tab-indicator {
+        active-color   "{{mPrimary}}"
+        inactive-color "{{mSurfaceVariant}}"
+        urgent-color   "{{mError}}"
+    }
+
+    insert-hint {
+        color "{{mPrimary}}80"
+    }
+}
+
+recent-windows {
+    highlight {
+        active-color "{{mPrimary}}"
+        urgent-color "{{mError}}"
+    }
+}
