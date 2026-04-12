@@ -52,6 +52,9 @@ TEMPLATES=(
     "$PROJECT_ROOT/dotfiles/alacritty/themes/noctalia.toml.template|$PROJECT_ROOT/dotfiles/alacritty/themes/noctalia.toml"
     "$PROJECT_ROOT/dotfiles/fuzzel/themes/noctalia.template|$PROJECT_ROOT/dotfiles/fuzzel/themes/noctalia"
     "$PROJECT_ROOT/dotfiles/noctalia/vscode-theme.json.template|$PROJECT_ROOT/dotfiles/noctalia/vscode-theme.json"
+    "$PROJECT_ROOT/dotfiles/kitty/themes/noctalia.conf.template|$PROJECT_ROOT/dotfiles/kitty/themes/noctalia.conf"
+    "$PROJECT_ROOT/dotfiles/foot/themes/noctalia.template|$PROJECT_ROOT/dotfiles/foot/themes/noctalia"
+    "$PROJECT_ROOT/dotfiles/walker/themes/noctalia/style.css.template|$PROJECT_ROOT/dotfiles/walker/themes/noctalia/style.css"
 )
 
 # Home config mappings
@@ -63,6 +66,15 @@ if [[ -d "$HOME/.config/alacritty/themes" ]]; then
 fi
 if [[ -d "$HOME/.config/fuzzel/themes" ]]; then
     TEMPLATES+=("$PROJECT_ROOT/dotfiles/fuzzel/themes/noctalia.template|$HOME/.config/fuzzel/themes/noctalia")
+fi
+if [[ -d "$HOME/.config/kitty/themes" ]]; then
+    TEMPLATES+=("$PROJECT_ROOT/dotfiles/kitty/themes/noctalia.conf.template|$HOME/.config/kitty/themes/noctalia.conf")
+fi
+if [[ -d "$HOME/.config/foot/themes" ]]; then
+    TEMPLATES+=("$PROJECT_ROOT/dotfiles/foot/themes/noctalia.template|$HOME/.config/foot/themes/noctalia")
+fi
+if [[ -d "$HOME/.config/walker/themes/noctalia" ]]; then
+    TEMPLATES+=("$PROJECT_ROOT/dotfiles/walker/themes/noctalia/style.css.template|$HOME/.config/walker/themes/noctalia/style.css")
 fi
 
 for entry in "${TEMPLATES[@]}"; do
