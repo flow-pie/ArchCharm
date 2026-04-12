@@ -27,9 +27,7 @@
 | Terminal (secondary) | [Kitty](https://sw.kovidgoyal.net/kitty/) | `~/.config/kitty/` |
 | Terminal (tertiary) | [Foot](https://codeberg.org/dnkl/foot) | `~/.config/foot/` |
 | Editor | [Neovim](https://neovim.io) + LazyVim | `~/.config/nvim/` |
-| Status Bar | [Waybar](https://github.com/Alexays/Waybar) | `~/.config/waybar/` |
 | App Launcher | [Fuzzel](https://codeberg.org/dnkl/fuzzel) | `~/.config/fuzzel/` |
-| Notifications | [Mako](https://emersion.fr/mako/) | `~/.config/mako/` |
 | Lock Screen | [Swaylock](https://github.com/mortie/swaylock-effects) | `~/.config/swaylock/` |
 | Power Menu | [Wlogout](https://github.com/ArtsyMacaw/wlogout) | `~/.config/wlogout/` |
 | Audio Visualizer | [Cava](https://github.com/karlstav/cava) | `~/.config/cava/` |
@@ -142,10 +140,8 @@ ArchCharm/
 │   ├── kitty/              # Kitty terminal + themes
 │   ├── foot/               # Foot terminal + themes
 │   ├── nvim/               # Neovim (LazyVim) config
-│   ├── waybar/             # Waybar status bar + modules
 │   ├── noctalia/           # Noctalia desktop shell
 │   ├── fastfetch/          # System info display
-│   ├── mako/               # Notification daemon
 │   ├── fuzzel/             # App launcher
 │   ├── swaylock/           # Lock screen
 │   ├── wlogout/            # Power menu
