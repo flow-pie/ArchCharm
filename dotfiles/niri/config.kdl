@@ -114,11 +114,13 @@ window-rule {
 
 window-rule {
     match app-id="Alacritty"
+    default-column-width { proportion 0.5; }
     opacity 0.87
 }
-window-rule{
-  match app-id="nautilus"
-  opacity 0.93
+window-rule {
+    match app-id="nautilus"
+    default-column-width { proportion 0.4; }
+    opacity 0.93
 }
 window-rule {
     match app-id="brave-browser"
@@ -128,24 +130,24 @@ window-rule {
 window-rule {
     match app-id="vesktop"
     opacity 0.93
-    open-maximized true
+    default-column-width { proportion 0.6; }
 }
 
 window-rule {
     match app-id="Equicord"
     opacity 0.93
-    open-maximized true
+    default-column-width { proportion 0.6; }
 }
 
 window-rule {
     match app-id="discord"
     opacity 0.93
-    open-maximized true
+    default-column-width { proportion 0.6; }
 }
 window-rule {
     match app-id=r#"^Code$|^code$"#
     opacity 0.93
-    open-maximized true
+    default-column-width { proportion 0.7; }
 }
 
 // Open the Firefox picture-in-picture player as floating by default.
