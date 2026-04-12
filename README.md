@@ -40,9 +40,13 @@
 | Directory Jumper | [Zoxide](https://github.com/ajeetdsouza/zoxide) | Fish integration |
 | Node Manager | [nvm.fish](https://github.com/jorgebucaran/nvm.fish) | Fish plugin |
 
-## Color Scheme — Noctalia
+### Dynamic Theming — Noctalia Engine
 
-The entire setup uses the **Noctalia** palette — a warm dark theme with orange, amber, and brown accents:
+The entire setup is powered by the **Noctalia Theme Engine**, allowing for single-command color palette updates across all applications:
+
+1. Edit `dotfiles/noctalia/colors.json`
+2. Run `./scripts/apply-theme.sh`
+3. Watch your entire desktop (Niri, Alacritty, Fuzzel, etc.) transform instantly.
 
 | Role | Hex | Preview |
 |------|-----|---------|

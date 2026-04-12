@@ -207,6 +207,10 @@ deploy_dotfiles() {
         link_file "${DOTFILES_DIR}/mimeapps.list" "${config_dir}/mimeapps.list"
     fi
 
+    # Apply colors
+    info "Applying Noctalia theme colors..."
+    "${SCRIPT_DIR}/scripts/apply-theme.sh"
+
     success "All dotfiles deployed"
 }
 
