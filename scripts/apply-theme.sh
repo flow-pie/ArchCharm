@@ -55,6 +55,8 @@ TEMPLATES=(
     "$PROJECT_ROOT/dotfiles/kitty/themes/noctalia.conf.template|$PROJECT_ROOT/dotfiles/kitty/themes/noctalia.conf"
     "$PROJECT_ROOT/dotfiles/foot/themes/noctalia.template|$PROJECT_ROOT/dotfiles/foot/themes/noctalia"
     "$PROJECT_ROOT/dotfiles/walker/themes/noctalia/style.css.template|$PROJECT_ROOT/dotfiles/walker/themes/noctalia/style.css"
+    "$PROJECT_ROOT/dotfiles/starship/starship.toml.template|$PROJECT_ROOT/dotfiles/starship/starship.toml"
+    "$PROJECT_ROOT/dotfiles/fish/themes/noctalia.fish.template|$PROJECT_ROOT/dotfiles/fish/themes/noctalia.fish"
 )
 
 # Home config mappings
@@ -75,6 +77,12 @@ if [[ -d "$HOME/.config/foot/themes" ]]; then
 fi
 if [[ -d "$HOME/.config/walker/themes/noctalia" ]]; then
     TEMPLATES+=("$PROJECT_ROOT/dotfiles/walker/themes/noctalia/style.css.template|$HOME/.config/walker/themes/noctalia/style.css")
+fi
+if [[ -d "$HOME/.config/prompt" ]]; then
+    TEMPLATES+=("$PROJECT_ROOT/dotfiles/starship/starship.toml.template|$HOME/.config/prompt/starship.toml")
+fi
+if [[ -d "$HOME/.config/fish/themes" ]]; then
+    TEMPLATES+=("$PROJECT_ROOT/dotfiles/fish/themes/noctalia.fish.template|$HOME/.config/fish/themes/noctalia.fish")
 fi
 
 for entry in "${TEMPLATES[@]}"; do
