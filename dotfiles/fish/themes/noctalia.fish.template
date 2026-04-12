@@ -33,4 +33,4 @@ set -g fish_pager_color_selected_background --background=$surface_variant
 
 # LS_COLORS (matching Noctalia)
 # di=folder, ex=executable, ln=link, pi=pipe, so=socket, bd=block, cd=char, or=orphan, mi=missing, su=setuid, sg=setgid, tw=sticky/other-writable, ow=other-writable
-set -gx LS_COLORS "di=1;38;2;{{mPrimary.hex_only.perl_regex}}:ex=1;38;2;{{mTertiary.hex_only.perl_regex}}:ln=38;2;{{mSecondary.hex_only.perl_regex}}:su=0;41:sg=0;46:tw=0;42:ow=0;43"
+set -gx LS_COLORS "di=1;38;2;{{mPrimary.rgb}}:ex=1;38;2;{{mTertiary.rgb}}:ln=38;2;{{mSecondary.rgb}}:su=0;41:sg=0;46:tw=0;42:ow=0;43"

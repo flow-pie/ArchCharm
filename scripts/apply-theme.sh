@@ -33,12 +33,14 @@ apply_template() {
         content="${content//\{\{$key.hex\}\}/$value}"
         content="${content//\{\{$key.hex_only\}\}/$hex_only}"
         
-        # LS_COLORS format (R:G:B)
+        # LS_COLORS format (R;G;B) - needs to be semicolons
         local r g b
         r=$(printf "%d" "0x${hex_only:0:2}")
         g=$(printf "%d" "0x${hex_only:2:2}")
         b=$(printf "%d" "0x${hex_only:4:2}")
-        content="${content//\{\{$key.hex_only.perl_regex\}\}/$r:$g:$b}"
+        content="${content//\{\{$key.rgb\}\}/$r;$g;$b}"
+        # Keep old one for a turn to avoid breakage during replacement
+        content="${content//\{\{$key.hex_only.perl_regex\}\}/$r;$g;$b}"
     done
 
     echo "$content" > "$output"
