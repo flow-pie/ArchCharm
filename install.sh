@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # ╔══════════════════════════════════════════════════════════════════╗
-# ║  ArchCharm - Professional Arch Linux Dotfiles                  ║
+# ║  ArchCharm - Arch Linux Dotfiles                  ║
 # ║  A cohesive, opinionated desktop environment built on Niri      ║
 # ╚══════════════════════════════════════════════════════════════════╝
 set -euo pipefail
@@ -280,7 +280,7 @@ install_fonts() {
 
     local font_pkgs=(
         "ttf-jetbrains-mono-nerd"
-        "ttf-maple"
+        "ttf-maple-font"
         "ttf-fira-code"
         "noto-fonts"
         "noto-fonts-emoji"

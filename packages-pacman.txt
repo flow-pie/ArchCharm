@@ -30,7 +30,6 @@ neovim
 
 # ── Launcher ───────────────────────────────────────────────────────
 fuzzel
-walker
 
 # ── Clipboard ──────────────────────────────────────────────────────
 cliphist
@@ -90,6 +89,5 @@ ripgrep
 fzf
 btop
 gnome-keyring
-wlogout
 xdg-utils
 gum
