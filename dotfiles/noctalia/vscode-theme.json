@@ -1,0 +1,31 @@
+{
+  "name": "Noctalia",
+  "type": "dark",
+  "colors": {
+    "editor.background": "#291c14",
+    "editor.foreground": "#f3f2f2",
+    "activityBar.background": "#291c14",
+    "activityBar.foreground": "#ea9462",
+    "sideBar.background": "#291c14",
+    "sideBar.foreground": "#f3f2f2",
+    "statusBar.background": "#291c14",
+    "statusBar.foreground": "#f3f2f2",
+    "titleBar.activeBackground": "#291c14",
+    "titleBar.activeForeground": "#f3f2f2",
+    "editorCursor.foreground": "#ea9462",
+    "editor.selectionBackground": "#ea946240",
+    "editor.lineHighlightBackground": "#452e21",
+    "list.activeSelectionBackground": "#ea946280",
+    "list.activeSelectionForeground": "#251d18",
+    "terminal.background": "#291c14",
+    "terminal.foreground": "#f3f2f2",
+    "terminal.ansiBlack": "#181818",
+    "terminal.ansiRed": "#dd641e",
+    "terminal.ansiGreen": "#ea9462",
+    "terminal.ansiYellow": "#74675f",
+    "terminal.ansiBlue": "#ea9462",
+    "terminal.ansiMagenta": "#aee74b",
+    "terminal.ansiCyan": "#e7d24b",
+    "terminal.ansiWhite": "#BAC2DE"
+  }
+}

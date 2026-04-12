@@ -51,6 +51,7 @@ TEMPLATES=(
     "$PROJECT_ROOT/dotfiles/niri/noctalia.kdl.template|$PROJECT_ROOT/dotfiles/niri/noctalia.kdl"
     "$PROJECT_ROOT/dotfiles/alacritty/themes/noctalia.toml.template|$PROJECT_ROOT/dotfiles/alacritty/themes/noctalia.toml"
     "$PROJECT_ROOT/dotfiles/fuzzel/themes/noctalia.template|$PROJECT_ROOT/dotfiles/fuzzel/themes/noctalia"
+    "$PROJECT_ROOT/dotfiles/noctalia/vscode-theme.json.template|$PROJECT_ROOT/dotfiles/noctalia/vscode-theme.json"
 )
 
 # Home config mappings
