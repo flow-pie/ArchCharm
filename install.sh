@@ -326,6 +326,7 @@ ${BOLD}Usage:${RESET}
   ./install.sh [options]
 
 ${BOLD}Options:${RESET}
+  -i, --interactive  Interactive menu (default if no options provided)
   -a, --all          Full installation (packages + dotfiles + services)
   -d, --dotfiles     Deploy dotfiles only (no package installation)
   -p, --packages     Install packages only (no dotfile deployment)
@@ -345,6 +346,37 @@ ${BOLD}Examples:${RESET}
 EOF
 }
 
+# ── Interactive Installer ──────────────────────────────────────────
+interactive_install() {
+    if ! command_exists gum; then
+        info "gum not found. Installing for interactive menu..."
+        sudo pacman -S --needed --noconfirm gum
+    fi
+
+    clear
+    gum style \
+        --foreground 212 --border-foreground 212 --border double \
+        --align center --width 50 --margin "1 2" --padding "2 4" \
+        "ARCHCHARM" "Professional Arch Linux Dotfiles"
+
+    local choice
+    choice=$(gum choose --no-limit "Fonts" "Packages" "Dotfiles" "Services" "All")
+
+    if [[ -z "$choice" ]]; then
+        error "No selection made. Exiting."
+        exit 1
+    fi
+
+    preflight
+
+    [[ "$choice" == *"Fonts"* ]] || [[ "$choice" == *"All"* ]] && install_fonts
+    [[ "$choice" == *"Packages"* ]] || [[ "$choice" == *"All"* ]] && install_packages
+    [[ "$choice" == *"Dotfiles"* ]] || [[ "$choice" == *"All"* ]] && { deploy_dotfiles; install_fisher; setup_shell; }
+    [[ "$choice" == *"Services"* ]] || [[ "$choice" == *"All"* ]] && enable_services
+
+    post_install
+}
+
 # ── Main ───────────────────────────────────────────────────────────
 main() {
     local do_all=false
@@ -352,10 +384,10 @@ main() {
     local do_packages=false
     local do_services=false
     local do_fonts=false
+    local interactive=false
 
     if [[ $# -eq 0 ]]; then
-        usage
-        exit 0
+        interactive=true
     fi
 
     while [[ $# -gt 0 ]]; do
@@ -365,6 +397,7 @@ main() {
         -p | --packages) do_packages=true ;;
         -s | --services) do_services=true ;;
         -f | --fonts) do_fonts=true ;;
+        -i | --interactive) interactive=true ;;
         -y | --yes) export ARCHCHARM_YES=1 ;;
         -h | --help)
             usage
@@ -378,6 +411,11 @@ main() {
         esac
         shift
     done
+
+    if $interactive; then
+        interactive_install
+        exit 0
+    fi
 
     echo -e "${CYAN}${BOLD}"
     echo "  ╔═══════════════════════════════════════════╗"

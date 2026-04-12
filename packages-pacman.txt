@@ -92,3 +92,4 @@ btop
 gnome-keyring
 wlogout
 xdg-utils
+gum
