@@ -116,6 +116,11 @@ install_packages() {
 
     local pacman_pkgs=()
     local aur_pkgs=()
+    local confirm_flag=""
+    
+    if [[ "${ARCHCHARM_YES:-}" == "1" ]]; then
+        confirm_flag="--noconfirm"
+    fi
 
     # Read package lists
     if [[ -f "${SCRIPT_DIR}/packages-pacman.txt" ]]; then
@@ -128,14 +133,14 @@ install_packages() {
     # Official repos
     if [[ ${#pacman_pkgs[@]} -gt 0 ]]; then
         info "Installing ${#pacman_pkgs[@]} packages from official repos..."
-        sudo pacman -S --needed --noconfirm "${pacman_pkgs[@]}" 2>&1 | tee -a "$LOG_FILE"
+        sudo pacman -S --needed $confirm_flag "${pacman_pkgs[@]}" 2>&1 | tee -a "$LOG_FILE"
         success "Official packages installed"
     fi
 
     # AUR
     if [[ ${#aur_pkgs[@]} -gt 0 ]]; then
         info "Installing ${#aur_pkgs[@]} packages from AUR..."
-        $AUR_HELPER -S --needed --noconfirm "${aur_pkgs[@]}" 2>&1 | tee -a "$LOG_FILE"
+        $AUR_HELPER -S --needed $confirm_flag "${aur_pkgs[@]}" 2>&1 | tee -a "$LOG_FILE"
         success "AUR packages installed"
     fi
 }
@@ -287,9 +292,14 @@ install_fonts() {
         "ttf-roboto-mono"
     )
 
+    local confirm_flag=""
+    if [[ "${ARCHCHARM_YES:-}" == "1" ]]; then
+        confirm_flag="--noconfirm"
+    fi
+
     info "Installing Nerd Fonts and typefaces..."
-    sudo pacman -S --needed --noconfirm "${font_pkgs[@]}" 2>&1 | tee -a "$LOG_FILE" ||
-        $AUR_HELPER -S --needed --noconfirm "${font_pkgs[@]}" 2>&1 | tee -a "$LOG_FILE"
+    sudo pacman -S --needed $confirm_flag "${font_pkgs[@]}" 2>&1 | tee -a "$LOG_FILE" ||
+        $AUR_HELPER -S --needed $confirm_flag "${font_pkgs[@]}" 2>&1 | tee -a "$LOG_FILE"
 
     fc-cache -fv &>/dev/null
     success "Fonts installed and cache refreshed"
