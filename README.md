@@ -204,6 +204,16 @@ This removes all symlinks created by the installer. Backups (if any) are preserv
 - Ensure `qs` (Quickshell) is installed: `qs --version`
 - Check: `qs -c noctalia-shell`
 
+## Credits & Inspirations
+
+ArchCharm is built on the shoulders of giants. Special thanks to the following projects and creators for their incredible work and inspiration:
+
+- **[Noctalia Shell](https://github.com/noctalia-dev/noctalia-shell)** — For the foundational shell, plugin system, and dynamic theming engine.
+- **[Niri](https://github.com/YaLTeR/niri)** — For the revolutionary scrollable tiling compositor.
+- **[LazyVim](https://github.com/LazyVim/LazyVim)** — For the modern Neovim experience.
+- **[ModernZ](https://github.com/Samillion/ModernZ)** — For the sleek media player interface.
+- **[Starship](https://starship.rs)** — For the cross-shell prompt that powers the terminal.
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
