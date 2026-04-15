@@ -50,12 +50,12 @@ The entire setup is powered by the **Noctalia Theme Engine**, allowing for singl
 
 | Role | Hex | Preview |
 |------|-----|---------|
-| Background | `#291c14` | ![#291c14](https://via.placeholder.com/16/291c14/291c14.png) |
-| Foreground | `#f3f2f2` | ![#f3f2f2](https://via.placeholder.com/16/f3f2f2/f3f2f2.png) |
-| Primary | `#ea9462` | ![#ea9462](https://via.placeholder.com/16/ea9462/ea9462.png) |
-| Secondary | `#e7d24b` | ![#e7d24b](https://via.placeholder.com/16/e7d24b/e7d24b.png) |
-| Accent | `#aee74b` | ![#aee74b](https://via.placeholder.com/16/aee74b/aee74b.png) |
-| Error | `#dd641e` | ![#dd641e](https://via.placeholder.com/16/dd641e/dd641e.png) |
+| Background | `#181818` | ![#181818](https://via.placeholder.com/16/181818/181818.png) |
+| Foreground | `#e4e4ef` | ![#e4e4ef](https://via.placeholder.com/16/e4e4ef/e4e4ef.png) |
+| Primary | `#ffdd33` | ![#ffdd33](https://via.placeholder.com/16/ffdd33/ffdd33.png) |
+| Secondary | `#96a6c8` | ![#96a6c8](https://via.placeholder.com/16/96a6c8/96a6c8.png) |
+| Tertiary | `#9e95c7` | ![#9e95c7](https://via.placeholder.com/16/9e95c7/9e95c7.png) |
+| Error | `#f43841` | ![#f43841](https://via.placeholder.com/16/f43841/f43841.png) |
 
 ## Requirements
 
