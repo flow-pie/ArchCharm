@@ -10,5 +10,10 @@ alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+
+# Sync Starship with Noctalia theme
+if [ -f "$HOME/.config/noctalia/colors.json" ]; then
+  eval $(jq -r 'to_entries | .[] | "export \(.key)=\"\(.value)\""' "$HOME/.config/noctalia/colors.json")
+fi
