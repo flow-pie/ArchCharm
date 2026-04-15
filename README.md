@@ -6,11 +6,10 @@
 [![Fish Shell](https://img.shields.io/badge/Fish-Shell-orange)](https://fishshell.com)
 [![Neovim](https://img.shields.io/badge/Neovim-LazyVim-green)](https://neovim.io)
 
-> Opinionated, production-ready dotfiles for Arch Linux — built around the Niri scrollable tiling compositor with a warm Noctalia color palette.
+> Dotfiles for Arch Linux — built around the Niri scrollable tiling compositor with a warm Noctalia color palette.
 
 ## Preview
 
-<!-- Replace with your actual screenshots -->
 | Desktop | Terminal | Launcher |
 |---------|----------|----------|
 | ![desktop](screenshots/desktop.png) | ![terminal](screenshots/terminal.png) | ![launcher](screenshots/launcher.png) |
@@ -216,5 +215,5 @@ MIT License — see [LICENSE](LICENSE) for details.
 ---
 
 <p align="center">
-  <b>ArchCharm</b> — Crafted for Arch Linux
+  <b>ArchCharm</b> — For Arch Linux
 </p>
