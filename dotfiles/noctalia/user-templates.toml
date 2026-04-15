@@ -1,3 +1,4 @@
 [config]
 
 [templates]
+"starship.toml" = "/home/jon/.config/prompt/starship.toml"

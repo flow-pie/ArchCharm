@@ -73,8 +73,8 @@
         ],
         "showCapsule": true,
         "showOnWorkspaceSwitch": true,
-        "showOutline": true,
-        "useSeparateOpacity": true,
+        "showOutline": false,
+        "useSeparateOpacity": false,
         "widgetSpacing": 5,
         "widgets": {
             "center": [
@@ -313,7 +313,7 @@
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "monitorForColors": "",
-        "predefinedScheme": "Tokyo Night",
+        "predefinedScheme": "Gruber Darker",
         "schedulingMode": "off",
         "useWallpaperColors": false
     },
