@@ -50,6 +50,12 @@ link_file() {
     local src="$1" dest="$2"
     backup_file "$dest"
     mkdir -p "$(dirname "$dest")"
+    
+    # Remove existing directory if it's not a symlink
+    if [[ -d "$dest" && ! -L "$dest" ]]; then
+        rm -rf "$dest"
+    fi
+    
     ln -sf "$src" "$dest"
     success "Linked: ${dest}"
 }
@@ -190,7 +196,8 @@ deploy_dotfiles() {
     link_file "${DOTFILES_DIR}/walker" "${config_dir}/walker"
 
     # Starship prompt
-    link_file "${DOTFILES_DIR}/starship/starship.toml" "${config_dir}/prompt/starship.toml"
+    info "Deploying Starship prompt config..."
+    link_file "${DOTFILES_DIR}/starship" "${config_dir}/prompt"
 
     # Scripts
     info "Installing helper scripts..."
@@ -266,12 +273,16 @@ install_fisher() {
 
     if command_exists fish; then
         info "Installing Fisher and plugins..."
+        # If fisher is already in the functions folder, it will be autoloaded.
+        # We only need to run it to ensure plugins in fish_plugins are installed.
         fish -c '
             if not functions -q fisher
                 curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source
-                fisher install jorgebucaran/fisher
+                fisher install jorgebucaran/fisher 2>/dev/null
             end
-            fisher install jorgebucaran/nvm.fish
+            # Fisher will automatically install plugins from ~/.config/fish/fish_plugins
+            # We run update to ensure everything is in sync, but allow it to fail if offline.
+            fisher update 2>/dev/null || true
         ' 2>&1 | tee -a "$LOG_FILE"
         success "Fisher plugins installed"
     else

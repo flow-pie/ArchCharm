@@ -1,9 +1,10 @@
 #!/bin/sh
-# Ensures noctalia.kdl has border, focus-ring, and shadow enabled
-# after Noctalia theme change regenerates the file.
-#
-# Noctalia's built-in niri template generates colors but omits
-# "on" and "width" directives. This script patches them in.
+# Applies Noctalia theme colors to all configured apps after theme change.
+# Runs automatically via Noctalia's colorGeneration hook.
+
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+
+"$SCRIPT_DIR/apply-theme.sh"
 
 FILE="$HOME/.config/niri/noctalia.kdl"
 [ -f "$FILE" ] || exit 0
