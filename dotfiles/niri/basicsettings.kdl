@@ -13,7 +13,7 @@ animations {
 
 layout {
     shadow {
-    off
+        on
     }
 
     gaps 8
@@ -29,16 +29,16 @@ layout {
     }
 
     focus-ring {
-        off
+        on
         width 2
-        active-color "#7fc8ff"
+        active-color "#ffc799"
         inactive-color "#505050"
     }
 
     border {
-        off
+        on
         width 2
-        active-color "#7fc8ff"
+        active-color "#ffc799"
         inactive-color "#505050"
     }
 

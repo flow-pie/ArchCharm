@@ -547,5 +547,5 @@ end
 
 # Sync Starship with Noctalia theme
 if test -f ~/.config/noctalia/colors.json
-    python3 /home/jon/.config/prompt/sync_theme.py
+    python3 $HOME/.config/prompt/sync_theme.py
 end

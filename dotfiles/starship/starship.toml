@@ -18,13 +18,13 @@ $character\
 """
 
 [palettes.noctalia]
-accent = "#ffdd33"
-lang = "#9e95c7"
-go_docker = "#96a6c8"
-git_status = "#95a99f"
-bg = "#181818"
-fg = "#e4e4ef"
-gray = "#484848"
+accent = "#e6b450"
+lang = "#39bae6"
+go_docker = "#aad94c"
+git_status = "#8e959e"
+bg = "#0b0e14"
+fg = "#d1d1c7"
+gray = "#565b66"
 
 [character]
 success_symbol = "[●](accent)[󰄸](gray)[●](accent) "
