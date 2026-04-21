@@ -31,14 +31,14 @@ layout {
     focus-ring {
         on
         width 2
-        active-color "#ffc799"
+        active-color "#e6b450"
         inactive-color "#505050"
     }
 
     border {
         on
         width 2
-        active-color "#ffc799"
+        active-color "#e6b450"
         inactive-color "#505050"
     }
 
